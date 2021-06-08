@@ -1,0 +1,28 @@
+{
+  "name": "@mojule/entity-app-client-admin",
+  "version": "0.1.0",
+  "description": "Client side admin for entity-app",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mojule/entity-app-client-admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mojule/entity-app-client-admin/issues"
+  },
+  "homepage": "https://github.com/mojule/entity-app-client-admin#readme",
+  "dependencies": {
+    "@mojule/dom": "^0.1.2",
+    "@mojule/entity-app": "^0.3.3",
+    "@mojule/json-pointer": "^0.3.4",
+    "@mojule/schema-forms": "^0.3.0",
+    "json-schema": "^0.3.0"
+  }
+}
