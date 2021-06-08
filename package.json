@@ -1,6 +1,6 @@
 {
   "name": "@mojule/entity-app-client-admin",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Client side admin for entity-app",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,9 +20,10 @@
   "homepage": "https://github.com/mojule/entity-app-client-admin#readme",
   "dependencies": {
     "@mojule/dom": "^0.1.2",
-    "@mojule/entity-app": "^0.3.3",
+    "@mojule/entity-app": "^0.3.6",
     "@mojule/json-pointer": "^0.3.4",
     "@mojule/schema-forms": "^0.3.0",
+    "@mojule/spa-router": "^0.1.1",
     "json-schema": "^0.3.0"
   }
 }
