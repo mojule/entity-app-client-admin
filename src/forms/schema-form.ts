@@ -5,6 +5,7 @@ import { startCase } from '@mojule/util'
 
 import { dedupeFieldsets } from './dedupe-fieldsets'
 import { decorateFormIcons } from './decorate-form-icons'
+import { JSONSchema7 } from 'json-schema'
 
 const templates = ClientFormTemplates( document, Event )
 
@@ -17,7 +18,7 @@ export const createSchemaForm = (
 ) => {
   const action = value === undefined ? 'create' : 'update'
 
-  const formEls = createFormEls( schema, undefined, value )
+  const formEls = createFormEls( schema as JSONSchema7, undefined, value )
 
   const submit = button(
     { 'data-action': action },
