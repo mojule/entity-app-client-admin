@@ -21,7 +21,7 @@ export type EntityPredicate<TEntityMap, TKey extends keyof TEntityMap = keyof TE
 
 const defaultEntityPredicate = () => true
 
-export const createEntityListRoute = <TEntityMap, TTemplateMap extends TEntityMap>(
+export const createEntityListRoute = <TModelMap, TEntityMap, TTemplateMap extends TEntityMap>(
   db: EntityDb<TEntityMap>,
   entityCategories: EntityCategories<TEntityMap>,
   entitySchema: EntitySchemaMap<TEntityMap>,
@@ -86,7 +86,9 @@ export const createEntityListRoute = <TEntityMap, TTemplateMap extends TEntityMa
 
           const title = schema[ 'title' ] || startCase( entityKey as string )
 
-          const allEntities = await collection.loadMany( await collection.ids() )
+          const allEntities = await collection.loadMany( 
+            await collection.ids() 
+          )
           
           const dbEntities = allEntities.filter( 
             e => filter( e, entityKey ) 
@@ -98,7 +100,7 @@ export const createEntityListRoute = <TEntityMap, TTemplateMap extends TEntityMa
             dbEntities.slice( 
               start, start + count 
             ).map( 
-              d => resolveRefsShallow( db, d ) 
+              d => resolveRefsShallow( db, d as any ) //fix
             )
           ) as ( TEntityMap[ keyof TEntityMap ] & DbItem )[]
 

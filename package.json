@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/mojule/entity-app-client-admin#readme",
   "dependencies": {
-    "@mojule/dom": "^0.1.2",
-    "@mojule/entity-app": "^0.3.20",
+    "@mojule/dom": "^0.1.4",
+    "@mojule/entity-app": "^0.4.0",
     "@mojule/json-pointer": "^0.3.4",
     "@mojule/schema-forms": "^0.3.0",
     "@mojule/spa-router": "^0.1.1",

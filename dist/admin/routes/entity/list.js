@@ -47,7 +47,8 @@ const createEntityListRoute = (db, entityCategories, entitySchema, templates, cr
                     const dbEntities = allEntities.filter(e => filter(e, entityKey)).reverse();
                     if (count < 0)
                         count = dbEntities.length;
-                    const resolvedEntities = await Promise.all(dbEntities.slice(start, start + count).map(d => entity_app_1.resolveRefsShallow(db, d)));
+                    const resolvedEntities = await Promise.all(dbEntities.slice(start, start + count).map(d => entity_app_1.resolveRefsShallow(db, d) //fix
+                    ));
                     const { show, pagination } = pagination_1.createPagination({
                         path: `#/list/${categorySlug}/${typeSlug}`,
                         total: dbEntities.length,
